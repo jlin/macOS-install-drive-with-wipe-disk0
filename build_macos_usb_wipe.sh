@@ -62,7 +62,7 @@ if [[ "${CONTINUE}" == "YES" ]] ; then
 		echo "\nFailed to create a bootable $CODENAME_CLEAN USB install drive. Please try again."
 		exit 138
 	}
-	curl -s -o /Volumes/Install\ "$CODENAME"/wipe-disk0.sh https://raw.githubusercontent.com/tristanthomas/mac-wipe-disk0/master/wipe-disk0.sh || {
+	curl -s -o /Volumes/Install\ "$CODENAME"/wipe-disk0.sh https://raw.githubusercontent.com/mozilla/mac-wipe-disk0/master/wipe-disk0.sh || {
 		echo "\nFailed to download the wipe-disk0.sh script. Please connect to the Internet then run this script again."
 		exit 139
 	}
