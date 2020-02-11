@@ -9,7 +9,12 @@
 # WARNING: The wipe-disk0.sh script wipes disk0 if executed. It should only be executed under macOS Recovery from a bootable macOS USB install drive.
 
 # Verify that the Install macOS app exists
-CODENAME=macOS\ High\ Sierra
+
+echo "\nPlease enter the codename of the macbook's macOS version you want to wipe (e.g. \"Mojave\" or \"Catalina\"). Input is case-sensitive: \n"
+read VERSION_NAME 
+
+CODENAME=macOS\ $VERSION_NAME
+
 MACOS_INSTALLER=$(ls /Applications| grep -s Install\ "$CODENAME" | sed 's/.app//')
 if [[  "${MACOS_INSTALLER}" == "" ]] ; then
 	CODENAME_CLEAN=$(echo "$CODENAME" | sed 's/\\//g')
