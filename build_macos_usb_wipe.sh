@@ -10,7 +10,7 @@
 
 # Verify that the Install macOS app exists
 
-echo "\nPlease enter the codename of the macbook's macOS version you want to wipe. Input is case-sensitive: \n"
+echo "\nPlease enter the codename of the macbook's macOS version you want to wipe (e.g. \"Mojave\" or \"Catalina\"). Input is case-sensitive: \n"
 read VERSION_NAME 
 
 CODENAME=macOS\ $VERSION_NAME
