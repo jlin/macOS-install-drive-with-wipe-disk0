@@ -62,6 +62,8 @@ if [[ "${CONTINUE}" == "YES" ]] ; then
 		echo "Failed to format the target USB drive ${TARGET[$SELECT]}"
 		exit 137
 	}
+	# wait 120s to let background tasks finish
+	sleep 120
 	echo "\nTo proceed, enter your password.\n"
 	sudo /Applications/Install\ "$CODENAME".app/Contents/Resources/createinstallmedia --nointeraction --volume /Volumes/wipe || {
 		echo "\nFailed to create a bootable $CODENAME_CLEAN USB install drive. Please try again."
